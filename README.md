@@ -1,1 +1,1 @@
-# life-app
+# Life App
