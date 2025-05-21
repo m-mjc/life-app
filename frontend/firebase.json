@@ -1,15 +1,34 @@
+// frontend/firebase.json
 {
   "hosting": {
+    // デプロイ対象の静的ファイルを格納するディレクトリ
     "public": "dist",
+
+    // このファイルや node_modules 等は無視する
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
     ],
+
+    // SPA (シングルページアプリ) なので、すべてのパスを index.html にフォールバック
     "rewrites": [
       {
         "source": "**",
         "destination": "/index.html"
+      }
+    ],
+
+    // ポップアップ window.close() を許可するための COOP ヘッダー
+    "headers": [
+      {
+        "source": "/**",
+        "headers": [
+          {
+            "key": "Cross-Origin-Opener-Policy",
+            "value": "same-origin-allow-popups"
+          }
+        ]
       }
     ]
   }
