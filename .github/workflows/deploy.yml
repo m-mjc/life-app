@@ -11,12 +11,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
-
-      - name: Dump repo contents
-        run: |
-          echo "📂 リポジトリ構造"
-          ls -R .
+          node-version: 20.x
 
       - name: Build app
         run: |
