@@ -2,7 +2,7 @@
 {
   "hosting": {
     // デプロイ対象の静的ファイルを格納するディレクトリ
-    "public": "dist",
+    "public": "frontend/dist",
 
     // このファイルや node_modules 等は無視する
     "ignore": [
