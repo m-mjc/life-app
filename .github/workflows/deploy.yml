@@ -26,7 +26,6 @@ jobs:
 
       - name: Deploy to Firebase
         uses: FirebaseExtended/action-hosting-deploy@v0
-        working-directory: ./frontend       # ← ここでサブフォルダ指定
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
